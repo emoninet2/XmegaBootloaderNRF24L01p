@@ -37,8 +37,13 @@
 #include "task.h"
 #include "queue.h"
 
-DigitalPin_t led = {&PORTR, 0};
+DigitalPin_t led1 = {&PORTR, 0};
 DigitalPin_t led2 = {&PORTR, 1};
+DigitalPin_t powLedR = {&PORTD, 4};
+DigitalPin_t powLedG = {&PORTD, 5};
+
+DigitalPin_t myswitch1 = {&PORTF, 1};
+DigitalPin_t myswitch2 = {&PORTF, 2};
 
 
 //#define  PROGRAM_ENTERS_BOOTLOADER
@@ -54,38 +59,37 @@ do                          \
 
 volatile bool nrf_led_flag  =0;
 
+volatile uint64_t nrfTXaddr = 0x0102030405;
 
-
-void *command_handler(char **args,int arg_count){
-
-	if(!strcmp(args[0], "tst1") ) {
-		DigitalPin_SetValue(&led);
-	}
-	else if(!strcmp(args[0], "tst2") ) {
-		DigitalPin_ClearValue(&led);
-	}
-	
-	else if(!strcmp(args[0], "rst") ) {
-		if(!strcmp(args[1], "app") ){
-
- 			CCPWrite(&(PMIC.CTRL), 0 );
-
-			asm("ldi r30, 0");
-			asm("ldi r31, 0");
-			asm("IJMP");
-		}
-		else if(!strcmp(args[1], "boot") ){
-			CCPWrite(&(PMIC.CTRL), 0 );
-			soft_reset();
-		}
-	}
-	else{
-
-	}
-
-	return 0;
-}
-
+// void *command_handler(char **args,int arg_count){
+// 
+// 	if(!strcmp(args[0], "tst1") ) {
+// 		DigitalPin_SetValue(&led);
+// 	}
+// 	else if(!strcmp(args[0], "tst2") ) {
+// 		DigitalPin_ClearValue(&led);
+// 	}
+// 	
+// 	else if(!strcmp(args[0], "rst") ) {
+// 		if(!strcmp(args[1], "app") ){
+// 
+//  			CCPWrite(&(PMIC.CTRL), 0 );
+// 
+// 			asm("ldi r30, 0");
+// 			asm("ldi r31, 0");
+// 			asm("IJMP");
+// 		}
+// 		else if(!strcmp(args[1], "boot") ){
+// 			CCPWrite(&(PMIC.CTRL), 0 );
+// 			soft_reset();
+// 		}
+// 	}
+// 	else{
+// 
+// 	}
+// 
+// 	return 0;
+//
 void command_parse_execute(char *command){
 
 	int arg_index = 0;
@@ -98,17 +102,20 @@ void command_parse_execute(char *command){
 		if(arg_index >=10) break;
 		pch = strtok (NULL, " ,");
 	}
-	command_handler(remotch_args,arg_index);
+	//command_handler(remotch_args,arg_index);
 }
 
 
 void package_handler(uint8_t *command){
 
-	if(command[0]=='x'){
-		DigitalPin_SetValue(&led);
+	if (command[0]=='a'){
+		nrfTXaddr = (command[1]<<32) | (command[2]<<24) | (command[3]<<16) | (command[4]<<8) | (command[5]<<0);
 	}
-	else if (command[0]=='y'){
-		DigitalPin_ClearValue(&led);
+	else if(command[0]=='x'){//led ON
+		DigitalPin_SetValue(&led1);
+	}
+	else if (command[0]=='y'){//led OFF
+		DigitalPin_ClearValue(&led1);
 	}
 	else if (command[0]=='q'){
  		
@@ -130,11 +137,13 @@ void package_handler(uint8_t *command){
 		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
 		uint8_t data;
 		data =  SP_ReadByte(address);
+		_nrf24l01p_send_to_address(nrfTXaddr, data, sizeof(data));
  	}
 	else if (command[0]=='R'){//read word
 		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
 		uint16_t data;
 		data =  SP_ReadWord(address);
+		_nrf24l01p_send_to_address(nrfTXaddr, data, sizeof(data));
 	}
 	else if (command[0]=='L'){
 		uint32_t address = (command[3]<<24) | (command[4]<<16) |  (command[5]<<8)  | command[6] ;
@@ -144,7 +153,7 @@ void package_handler(uint8_t *command){
 	else if (command[0]=='C'){
 		SP_EraseFlashBuffer();
 	}
-	else if (command[0]=='E'){
+	else if (command[0]=='E'){//erase application section
 		SP_EraseApplicationSections();
 	}
 	else if (command[0]=='e'){
@@ -203,46 +212,30 @@ int main(void)
 
 	CCPWrite(&(PMIC.CTRL), PMIC_IVSEL_bm );
 
-// 	volatile uint8_t x = SP_ReadWord(0);
-// 	
-// 	SP_EraseApplicationSections();
-// 	SP_LoadFlashPage(myflashpagedata);
-// 	SP_WriteApplicationPage(0);
-// 
-// 	asm("nop");
-// 
-// 	SP_ReadFlashPage(myflashpagedata2, 0);
-// 	NVM.CMD = 0x2B;
-// 
-// 
-// 
-// 	 
-// 	
-// 
-// 	//asm("ldi r17, 0x3f");
-// 
-// 	asm("lpm r6,Z");
-// 	_LPM_toReg(7);
-// 
-// 	//_MOV(3, 18);
-// 	_MOV(16, 17);
-// 	_TEST(19, 54);
+	DigitalPin_SetValue(&led1);
+	DigitalPin_SetValue(&led2);
+	DigitalPin_SetDir(&led1,1);
+	DigitalPin_SetDir(&led2,1);
+	DigitalPin_SetDir(&powLedR,1);
+	DigitalPin_SetDir(&powLedG,1);
+
+	//DigitalPin_SetValue(&powLedR);//off
+	DigitalPin_ClearValue(&powLedR);//on
+	DigitalPin_SetValue(&powLedG);//on
+	//DigitalPin_ClearValue(&powLedG);//off
 
 
-
-	
-	uint64_t nrfaddress = 0x4C4C4C4C31;
+	uint64_t nrfTXaddr = 0x4C4C4C4C31;
 	_nrf24l01p_init();
 
 	//LEFT
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P1, 0x4C4C4C4C31);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P2, nrfaddress+1);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P3, nrfaddress+2);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P4, nrfaddress+3);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P5, nrfaddress+4);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P1, nrfTXaddr);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P2, nrfTXaddr+1);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P3, nrfTXaddr+2);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P4, nrfTXaddr+3);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P5, nrfTXaddr+4);
 	char rxData[35];
-	DigitalPin_SetDir(&led,1);
-	DigitalPin_ClearValue(&led);
+
 	while(1){
 
 		if((_nrf24l01p_readable(_NRF24L01P_PIPE_P1))){

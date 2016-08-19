@@ -26,8 +26,6 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_muluhisi3.o) (__umulhisi3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok.o)
                               main.o (strtok)
-c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strcmp.o)
-                              main.o (strcmp)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok_r.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok.o) (strtok_r)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime.o)
@@ -150,18 +148,12 @@ Discarded input sections
  .text          0x00000000        0x0 Component_Drivers/nrf24l01p/nrf24l01p.o
  .data          0x00000000        0x0 Component_Drivers/nrf24l01p/nrf24l01p.o
  .bss           0x00000000        0x0 Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_write_tx_payload
-                0x00000000       0x4a Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_flush_tx
-                0x00000000       0x14 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_reuse_tx_payload
                 0x00000000       0x14 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_write_ack_payload
                 0x00000000       0x4e Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_write_tx_payload_noack
                 0x00000000       0x4a Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_tx_mode
-                0x00000000       0x3e Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_set_CRC
                 0x00000000       0x42 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_disable_auto_ack
@@ -194,15 +186,11 @@ Discarded input sections
                 0x00000000       0x2c Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_RX_pipe_address
                 0x00000000       0xb0 Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_set_TX_pipe_address
-                0x00000000       0x86 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_TX_pipe_address
                 0x00000000       0x66 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_RX_pipe_width
                 0x00000000       0x26 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_fifo_flag_rx_full
-                0x00000000       0x28 Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_get_fifo_flag_tx_empty
                 0x00000000       0x28 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_fifo_flag_tx_full
                 0x00000000       0x2a Component_Drivers/nrf24l01p/nrf24l01p.o
@@ -222,24 +210,12 @@ Discarded input sections
                 0x00000000        0x2 Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_tx_fifo_full_flag
                 0x00000000        0x8 Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_get_max_retry_flag
-                0x00000000       0x14 Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_clear_max_retry_flag
-                0x00000000       0x2a Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_get_data_sent_flag
-                0x00000000       0x18 Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_clear_data_sent_flag
-                0x00000000       0x2a Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_data_ready_flag
                 0x00000000       0x1a Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_get_rx_payload_pipe
                 0x00000000        0xe Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_send
-                0x00000000       0xbe Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_resend
                 0x00000000       0x78 Component_Drivers/nrf24l01p/nrf24l01p.o
- .text._nrf24l01p_send_to_address
-                0x00000000       0x1e Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_send_to_address_ack
                 0x00000000       0x6e Component_Drivers/nrf24l01p/nrf24l01p.o
  .text._nrf24l01p_send_until_ack
@@ -540,14 +516,15 @@ Discarded input sections
  .text.ds1302_getTimestamp
                 0x00000000      0x11a main.o
  .rodata.str1.1
-                0x00000000       0x1a main.o
- .text.command_handler
-                0x00000000       0xb4 main.o
+                0x00000000        0x3 main.o
  .text.command_parse_execute
-                0x00000000       0x7a main.o
+                0x00000000       0x32 main.o
  .bss._boot_mode
                 0x00000000        0x1 main.o
- .data.led2     0x00000000        0x3 main.o
+ .data.myswitch2
+                0x00000000        0x3 main.o
+ .data.myswitch1
+                0x00000000        0x3 main.o
  .data.ds1302_rst
                 0x00000000        0x3 main.o
  .data.ds1302_io
@@ -1229,11 +1206,6 @@ Discarded input sections
  .text.avr-libc
                 0x00000000        0x8 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok.o)
  .comment       0x00000000       0x31 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok.o)
- .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strcmp.o)
- .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strcmp.o)
- .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strcmp.o)
- .text.avr-libc
-                0x00000000       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strcmp.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok_r.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok_r.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok_r.o)
@@ -1488,7 +1460,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00060000     0x105a
+.text           0x00060000     0x13e0
  *(.vectors)
  .vectors       0x00060000      0x1fc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/XMEGAC_DFP/1.0.29/gcc/dev/atxmega384c3/avrxmega6/crtatxmega384c3.o
                 0x00060000                __vector_default
@@ -1707,146 +1679,179 @@ END GROUP
  .text._nrf24l01p_read_rx_payload
                 0x0006048a       0x5a Component_Drivers/nrf24l01p/nrf24l01p.o
                 0x0006048a                _nrf24l01p_read_rx_payload
+ .text._nrf24l01p_write_tx_payload
+                0x000604e4       0x4a Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x000604e4                _nrf24l01p_write_tx_payload
+ .text._nrf24l01p_flush_tx
+                0x0006052e       0x14 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x0006052e                _nrf24l01p_flush_tx
  .text._nrf24l01p_flush_rx
-                0x000604e4       0x14 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000604e4                _nrf24l01p_flush_rx
+                0x00060542       0x14 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060542                _nrf24l01p_flush_rx
  .text._nrf24l01p_read_rx_payload_width
-                0x000604f8       0x24 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000604f8                _nrf24l01p_read_rx_payload_width
+                0x00060556       0x24 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060556                _nrf24l01p_read_rx_payload_width
  .text._nrf24l01p_power_up
-                0x0006051c       0x4a Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x0006051c                _nrf24l01p_power_up
+                0x0006057a       0x4a Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x0006057a                _nrf24l01p_power_up
  .text._nrf24l01p_power_down
-                0x00060566       0x3e Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060566                _nrf24l01p_power_down
+                0x000605c4       0x3e Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x000605c4                _nrf24l01p_power_down
  .text._nrf24l01p_rx_mode
-                0x000605a4       0x3e Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000605a4                _nrf24l01p_rx_mode
+                0x00060602       0x3e Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060602                _nrf24l01p_rx_mode
+ .text._nrf24l01p_tx_mode
+                0x00060640       0x3e Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060640                _nrf24l01p_tx_mode
  .text._nrf24l01p_enable_auto_ack
-                0x000605e2       0x4e Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000605e2                _nrf24l01p_enable_auto_ack
+                0x0006067e       0x4e Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x0006067e                _nrf24l01p_enable_auto_ack
  .text._nrf24l01p_disable_auto_ack_all_pipes
-                0x00060630       0x24 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060630                _nrf24l01p_disable_auto_ack_all_pipes
+                0x000606cc       0x24 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x000606cc                _nrf24l01p_disable_auto_ack_all_pipes
  .text._nrf24l01p_enable_rx_on_pipe
-                0x00060654       0x4e Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060654                _nrf24l01p_enable_rx_on_pipe
+                0x000606f0       0x4e Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x000606f0                _nrf24l01p_enable_rx_on_pipe
  .text._nrf24l01p_set_auto_retransmission_count
-                0x000606a2       0x42 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000606a2                _nrf24l01p_set_auto_retransmission_count
+                0x0006073e       0x42 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x0006073e                _nrf24l01p_set_auto_retransmission_count
  .text._nrf24l01p_set_auto_retransmission_delay
-                0x000606e4       0x48 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000606e4                _nrf24l01p_set_auto_retransmission_delay
+                0x00060780       0x48 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060780                _nrf24l01p_set_auto_retransmission_delay
  .text._nrf24l01p_set_DataRate
-                0x0006072c       0x42 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x0006072c                _nrf24l01p_set_DataRate
+                0x000607c8       0x42 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x000607c8                _nrf24l01p_set_DataRate
  .text._nrf24l01p_set_RX_pipe_address
-                0x0006076e       0xdc Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x0006076e                _nrf24l01p_set_RX_pipe_address
+                0x0006080a       0xdc Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x0006080a                _nrf24l01p_set_RX_pipe_address
+ .text._nrf24l01p_set_TX_pipe_address
+                0x000608e6       0x86 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x000608e6                _nrf24l01p_set_TX_pipe_address
  .text._nrf24l01p_get_fifo_flag_rx_empty
-                0x0006084a       0x26 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x0006084a                _nrf24l01p_get_fifo_flag_rx_empty
+                0x0006096c       0x26 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x0006096c                _nrf24l01p_get_fifo_flag_rx_empty
+ .text._nrf24l01p_get_fifo_flag_tx_empty
+                0x00060992       0x28 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060992                _nrf24l01p_get_fifo_flag_tx_empty
  .text._nrf24l01p_enable_dynamic_payload_pipe
-                0x00060870       0x4e Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060870                _nrf24l01p_enable_dynamic_payload_pipe
+                0x000609ba       0x4e Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x000609ba                _nrf24l01p_enable_dynamic_payload_pipe
  .text._nrf24l01p_disable_dynamic_payload_all_pipe
-                0x000608be       0x24 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000608be                _nrf24l01p_disable_dynamic_payload_all_pipe
+                0x00060a08       0x24 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060a08                _nrf24l01p_disable_dynamic_payload_all_pipe
  .text._nrf24l01p_enable_dynamic_payload
-                0x000608e2       0x38 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000608e2                _nrf24l01p_enable_dynamic_payload
+                0x00060a2c       0x38 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060a2c                _nrf24l01p_enable_dynamic_payload
  .text._nrf24l01p_enable_payload_with_ack
-                0x0006091a       0x38 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x0006091a                _nrf24l01p_enable_payload_with_ack
+                0x00060a64       0x38 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060a64                _nrf24l01p_enable_payload_with_ack
  .text._nrf24l01p_startup
-                0x00060952       0x66 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060952                _nrf24l01p_startup
+                0x00060a9c       0x66 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060a9c                _nrf24l01p_startup
  .text._nrf24l01p_init
-                0x000609b8      0x104 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x000609b8                _nrf24l01p_init
+                0x00060b02      0x104 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060b02                _nrf24l01p_init
  .text._nrf24l01p_reinit_loop
-                0x00060abc       0x16 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060abc                _nrf24l01p_reinit_loop
+                0x00060c06       0x16 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060c06                _nrf24l01p_reinit_loop
  .text._nrf24l01p_get_status
-                0x00060ad2       0x2c Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060ad2                _nrf24l01p_get_status
+                0x00060c1c       0x2c Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060c1c                _nrf24l01p_get_status
+ .text._nrf24l01p_get_max_retry_flag
+                0x00060c48       0x14 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060c48                _nrf24l01p_get_max_retry_flag
+ .text._nrf24l01p_clear_max_retry_flag
+                0x00060c5c       0x2a Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060c5c                _nrf24l01p_clear_max_retry_flag
+ .text._nrf24l01p_get_data_sent_flag
+                0x00060c86       0x18 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060c86                _nrf24l01p_get_data_sent_flag
+ .text._nrf24l01p_clear_data_sent_flag
+                0x00060c9e       0x2a Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060c9e                _nrf24l01p_clear_data_sent_flag
  .text._nrf24l01p_clear_data_ready_flag
-                0x00060afe       0x2a Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060afe                _nrf24l01p_clear_data_ready_flag
+                0x00060cc8       0x2a Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060cc8                _nrf24l01p_clear_data_ready_flag
  .text._nrf24l01p_readable
-                0x00060b28       0x34 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060b28                _nrf24l01p_readable
+                0x00060cf2       0x34 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060cf2                _nrf24l01p_readable
+ .text._nrf24l01p_send
+                0x00060d26       0xbe Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060d26                _nrf24l01p_send
+ .text._nrf24l01p_send_to_address
+                0x00060de4       0x1e Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060de4                _nrf24l01p_send_to_address
  .text._nrf24l01p_read_dyn_pld
-                0x00060b5c       0x62 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x00060b5c                _nrf24l01p_read_dyn_pld
+                0x00060e02       0x62 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00060e02                _nrf24l01p_read_dyn_pld
  .text.package_handler
-                0x00060bbe      0x184 main.o
-                0x00060bbe                package_handler
- .text.main     0x00060d42       0xfc main.o
-                0x00060d42                main
+                0x00060e64      0x22e main.o
+                0x00060e64                package_handler
+ .text.main     0x00061092      0x132 main.o
+                0x00061092                main
  .text.DigitalPin_SetDir
-                0x00060e3e       0x44 XMEGA_API/DIGITALPIN.o
-                0x00060e3e                DigitalPin_SetDir
+                0x000611c4       0x44 XMEGA_API/DIGITALPIN.o
+                0x000611c4                DigitalPin_SetDir
  .text.DigitalPin_SetValue
-                0x00060e82       0x20 XMEGA_API/DIGITALPIN.o
-                0x00060e82                DigitalPin_SetValue
+                0x00061208       0x20 XMEGA_API/DIGITALPIN.o
+                0x00061208                DigitalPin_SetValue
  .text.DigitalPin_ClearValue
-                0x00060ea2       0x20 XMEGA_API/DIGITALPIN.o
-                0x00060ea2                DigitalPin_ClearValue
+                0x00061228       0x20 XMEGA_API/DIGITALPIN.o
+                0x00061228                DigitalPin_ClearValue
  .text.__vector_25
-                0x00060ec2       0x14 XMEGA_API/USART.o
-                0x00060ec2                __vector_25
+                0x00061248       0x14 XMEGA_API/USART.o
+                0x00061248                __vector_25
  .text.__vector_27
-                0x00060ed6       0x14 XMEGA_API/USART.o
-                0x00060ed6                __vector_27
+                0x0006125c       0x14 XMEGA_API/USART.o
+                0x0006125c                __vector_27
  .text.__vector_26
-                0x00060eea       0x14 XMEGA_API/USART.o
-                0x00060eea                __vector_26
+                0x00061270       0x14 XMEGA_API/USART.o
+                0x00061270                __vector_26
  .text.__vector_28
-                0x00060efe       0x14 XMEGA_API/USART.o
-                0x00060efe                __vector_28
+                0x00061284       0x14 XMEGA_API/USART.o
+                0x00061284                __vector_28
  .text.__vector_30
-                0x00060f12       0x14 XMEGA_API/USART.o
-                0x00060f12                __vector_30
+                0x00061298       0x14 XMEGA_API/USART.o
+                0x00061298                __vector_30
  .text.__vector_29
-                0x00060f26       0x14 XMEGA_API/USART.o
-                0x00060f26                __vector_29
+                0x000612ac       0x14 XMEGA_API/USART.o
+                0x000612ac                __vector_29
  .text.__vector_88
-                0x00060f3a       0x14 XMEGA_API/USART.o
-                0x00060f3a                __vector_88
+                0x000612c0       0x14 XMEGA_API/USART.o
+                0x000612c0                __vector_88
  .text.__vector_90
-                0x00060f4e       0x14 XMEGA_API/USART.o
-                0x00060f4e                __vector_90
+                0x000612d4       0x14 XMEGA_API/USART.o
+                0x000612d4                __vector_90
  .text.__vector_89
-                0x00060f62       0x14 XMEGA_API/USART.o
-                0x00060f62                __vector_89
+                0x000612e8       0x14 XMEGA_API/USART.o
+                0x000612e8                __vector_89
  .text.__vector_58
-                0x00060f76       0x14 XMEGA_API/USART.o
-                0x00060f76                __vector_58
+                0x000612fc       0x14 XMEGA_API/USART.o
+                0x000612fc                __vector_58
  .text.__vector_60
-                0x00060f8a       0x14 XMEGA_API/USART.o
-                0x00060f8a                __vector_60
+                0x00061310       0x14 XMEGA_API/USART.o
+                0x00061310                __vector_60
  .text.__vector_59
-                0x00060f9e       0x14 XMEGA_API/USART.o
-                0x00060f9e                __vector_59
+                0x00061324       0x14 XMEGA_API/USART.o
+                0x00061324                __vector_59
  .text.CCPWrite
-                0x00060fb2       0x2a XMEGA_DRIVERS/clksys_driver.o
-                0x00060fb2                CCPWrite
+                0x00061338       0x2a XMEGA_DRIVERS/clksys_driver.o
+                0x00061338                CCPWrite
  .text.CLKSYS_Disable
-                0x00060fdc       0x14 XMEGA_DRIVERS/clksys_driver.o
-                0x00060fdc                CLKSYS_Disable
+                0x00061362       0x14 XMEGA_DRIVERS/clksys_driver.o
+                0x00061362                CLKSYS_Disable
  .text.CLKSYS_Main_ClockSource_Select
-                0x00060ff0       0x2a XMEGA_DRIVERS/clksys_driver.o
-                0x00060ff0                CLKSYS_Main_ClockSource_Select
+                0x00061376       0x2a XMEGA_DRIVERS/clksys_driver.o
+                0x00061376                CLKSYS_Main_ClockSource_Select
  .text.libgcc.builtins
-                0x0006101a       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_ashrdi3.o)
-                0x0006101a                __ashrdi3
-                0x0006101e                __lshrdi3
-                0x00061056                . = ALIGN (0x2)
+                0x000613a0       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_ashrdi3.o)
+                0x000613a0                __ashrdi3
+                0x000613a4                __lshrdi3
+                0x000613dc                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00061056        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
-                0x00061056                _exit
-                0x00061056                exit
+ .fini9         0x000613dc        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
+                0x000613dc                _exit
+                0x000613dc                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1865,15 +1870,15 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00061056        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
+ .fini0         0x000613dc        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
  *(.fini0)
-                0x0006105a                _etext = .
+                0x000613e0                _etext = .
 
-.BOOT           0x0006105a       0x3a
- .BOOT          0x0006105a       0x3a XMEGA_SERVICES/bootloader.o
-                0x0006105a                SP_LoadFlashPage
+.BOOT           0x000613e0       0x3a
+ .BOOT          0x000613e0       0x3a XMEGA_SERVICES/bootloader.o
+                0x000613e0                SP_LoadFlashPage
 
-.data           0x00802000        0xa load address 0x00061094
+.data           0x00802000       0x1a load address 0x0006141a
                 0x00802000                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1881,43 +1886,51 @@ END GROUP
                 0x00802000        0x3 Component_Drivers/nrf24l01p/nrf24l01p.o
  .data.nrf24l01p_csn_pin
                 0x00802003        0x3 Component_Drivers/nrf24l01p/nrf24l01p.o
- .data.led      0x00802006        0x3 main.o
-                0x00802006                led
+ .data.nrfTXaddr
+                0x00802006        0x8 main.o
+                0x00802006                nrfTXaddr
+ .data.powLedG  0x0080200e        0x3 main.o
+                0x0080200e                powLedG
+ .data.powLedR  0x00802011        0x3 main.o
+                0x00802011                powLedR
+ .data.led2     0x00802014        0x3 main.o
+                0x00802014                led2
+ .data.led1     0x00802017        0x3 main.o
+                0x00802017                led1
  *(.rodata)
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x0080200a                . = ALIGN (0x2)
- *fill*         0x00802009        0x1 
-                0x0080200a                _edata = .
-                0x0080200a                PROVIDE (__data_end, .)
+                0x0080201a                . = ALIGN (0x2)
+                0x0080201a                _edata = .
+                0x0080201a                PROVIDE (__data_end, .)
 
-.bss            0x0080200a      0x437
-                0x0080200a                PROVIDE (__bss_start, .)
+.bss            0x0080201a      0x437
+                0x0080201a                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.nrf_led_flag
-                0x0080200a        0x1 main.o
-                0x0080200a                nrf_led_flag
+                0x0080201a        0x1 main.o
+                0x0080201a                nrf_led_flag
  *(COMMON)
- COMMON         0x0080200b        0x5 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x0080200b                csn_value
-                0x0080200c                ce_value
-                0x0080200d                mode
-                0x0080200e                mystat
- COMMON         0x00802010      0x431 main.o
-                0x00802010                myflashpagedata
-                0x00802210                nrf24l01p_reachable_addresses
-                0x00802240                myflashpagedata2
-                0x00802440                writeProtect
-                0x00802441                PROVIDE (__bss_end, .)
-                0x00061094                __data_load_start = LOADADDR (.data)
-                0x0006109e                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0080201b        0x5 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x0080201b                csn_value
+                0x0080201c                ce_value
+                0x0080201d                mode
+                0x0080201e                mystat
+ COMMON         0x00802020      0x431 main.o
+                0x00802020                myflashpagedata
+                0x00802220                nrf24l01p_reachable_addresses
+                0x00802250                myflashpagedata2
+                0x00802450                writeProtect
+                0x00802451                PROVIDE (__bss_end, .)
+                0x0006141a                __data_load_start = LOADADDR (.data)
+                0x00061434                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00802441        0x0
+.noinit         0x00802451        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00802441                _end = .
+                0x00802451                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -1986,79 +1999,79 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x620
+.debug_aranges  0x00000000      0x618
  *(.debug_aranges)
  .debug_aranges
                 0x00000000      0x298 Component_Drivers/nrf24l01p/nrf24l01p.o
  .debug_aranges
-                0x00000298      0x190 main.o
+                0x00000298      0x188 main.o
  .debug_aranges
-                0x00000428       0x48 XMEGA_API/DIGITALPIN.o
+                0x00000420       0x48 XMEGA_API/DIGITALPIN.o
  .debug_aranges
-                0x00000470      0x120 XMEGA_API/USART.o
+                0x00000468      0x120 XMEGA_API/USART.o
  .debug_aranges
-                0x00000590       0x68 XMEGA_DRIVERS/clksys_driver.o
+                0x00000588       0x68 XMEGA_DRIVERS/clksys_driver.o
  .debug_aranges
-                0x000005f8       0x28 XMEGA_SERVICES/bootloader.o
+                0x000005f0       0x28 XMEGA_SERVICES/bootloader.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x72cb
+.debug_info     0x00000000     0x726b
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x2cdc Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_info    0x00002cdc     0x3081 main.o
- .debug_info    0x00005d5d      0x4c8 XMEGA_API/DIGITALPIN.o
- .debug_info    0x00006225      0x9bf XMEGA_API/USART.o
- .debug_info    0x00006be4      0x645 XMEGA_DRIVERS/clksys_driver.o
- .debug_info    0x00007229       0xa2 XMEGA_SERVICES/bootloader.o
+ .debug_info    0x00002cdc     0x3021 main.o
+ .debug_info    0x00005cfd      0x4c8 XMEGA_API/DIGITALPIN.o
+ .debug_info    0x000061c5      0x9bf XMEGA_API/USART.o
+ .debug_info    0x00006b84      0x645 XMEGA_DRIVERS/clksys_driver.o
+ .debug_info    0x000071c9       0xa2 XMEGA_SERVICES/bootloader.o
 
-.debug_abbrev   0x00000000      0xe91
+.debug_abbrev   0x00000000      0xe79
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x411 Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_abbrev  0x00000411      0x5f9 main.o
- .debug_abbrev  0x00000a0a      0x15f XMEGA_API/DIGITALPIN.o
- .debug_abbrev  0x00000b69      0x14e XMEGA_API/USART.o
- .debug_abbrev  0x00000cb7      0x1c8 XMEGA_DRIVERS/clksys_driver.o
- .debug_abbrev  0x00000e7f       0x12 XMEGA_SERVICES/bootloader.o
+ .debug_abbrev  0x00000411      0x5e1 main.o
+ .debug_abbrev  0x000009f2      0x15f XMEGA_API/DIGITALPIN.o
+ .debug_abbrev  0x00000b51      0x14e XMEGA_API/USART.o
+ .debug_abbrev  0x00000c9f      0x1c8 XMEGA_DRIVERS/clksys_driver.o
+ .debug_abbrev  0x00000e67       0x12 XMEGA_SERVICES/bootloader.o
 
-.debug_line     0x00000000     0x31b9
+.debug_line     0x00000000     0x3177
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000     0x12ed Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_line    0x000012ed     0x11b0 main.o
- .debug_line    0x0000249d      0x1f7 XMEGA_API/DIGITALPIN.o
- .debug_line    0x00002694      0x516 XMEGA_API/USART.o
- .debug_line    0x00002baa      0x24f XMEGA_DRIVERS/clksys_driver.o
- .debug_line    0x00002df9      0x3c0 XMEGA_SERVICES/bootloader.o
+ .debug_line    0x000012ed     0x116e main.o
+ .debug_line    0x0000245b      0x1f7 XMEGA_API/DIGITALPIN.o
+ .debug_line    0x00002652      0x516 XMEGA_API/USART.o
+ .debug_line    0x00002b68      0x24f XMEGA_DRIVERS/clksys_driver.o
+ .debug_line    0x00002db7      0x3c0 XMEGA_SERVICES/bootloader.o
 
-.debug_frame    0x00000000     0x14d4
+.debug_frame    0x00000000     0x14ac
  *(.debug_frame)
  .debug_frame   0x00000000      0xae0 Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_frame   0x00000ae0      0x5c0 main.o
- .debug_frame   0x000010a0       0x7c XMEGA_API/DIGITALPIN.o
- .debug_frame   0x0000111c      0x2dc XMEGA_API/USART.o
- .debug_frame   0x000013f8       0xdc XMEGA_DRIVERS/clksys_driver.o
+ .debug_frame   0x00000ae0      0x598 main.o
+ .debug_frame   0x00001078       0x7c XMEGA_API/DIGITALPIN.o
+ .debug_frame   0x000010f4      0x2dc XMEGA_API/USART.o
+ .debug_frame   0x000013d0       0xdc XMEGA_DRIVERS/clksys_driver.o
 
-.debug_str      0x00000000     0x2ac8
+.debug_str      0x00000000     0x2acf
  *(.debug_str)
  .debug_str     0x00000000     0x108c Component_Drivers/nrf24l01p/nrf24l01p.o
                                0x1161 (size before relaxing)
- .debug_str     0x0000108c     0x116e main.o
-                               0x1600 (size before relaxing)
- .debug_str     0x000021fa       0xae XMEGA_API/DIGITALPIN.o
+ .debug_str     0x0000108c     0x1175 main.o
+                               0x161d (size before relaxing)
+ .debug_str     0x00002201       0xae XMEGA_API/DIGITALPIN.o
                                 0x4f0 (size before relaxing)
- .debug_str     0x000022a8      0x322 XMEGA_API/USART.o
+ .debug_str     0x000022af      0x322 XMEGA_API/USART.o
                                 0x8e6 (size before relaxing)
- .debug_str     0x000025ca      0x4fe XMEGA_DRIVERS/clksys_driver.o
+ .debug_str     0x000025d1      0x4fe XMEGA_DRIVERS/clksys_driver.o
                                 0x7f3 (size before relaxing)
 
-.debug_loc      0x00000000     0x5506
+.debug_loc      0x00000000     0x56b2
  *(.debug_loc)
  .debug_loc     0x00000000     0x296a Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_loc     0x0000296a     0x212c main.o
- .debug_loc     0x00004a96       0xd0 XMEGA_API/DIGITALPIN.o
- .debug_loc     0x00004b66      0x6ea XMEGA_API/USART.o
- .debug_loc     0x00005250      0x2b6 XMEGA_DRIVERS/clksys_driver.o
+ .debug_loc     0x0000296a     0x22d8 main.o
+ .debug_loc     0x00004c42       0xd0 XMEGA_API/DIGITALPIN.o
+ .debug_loc     0x00004d12      0x6ea XMEGA_API/USART.o
+ .debug_loc     0x000053fc      0x2b6 XMEGA_DRIVERS/clksys_driver.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2078,14 +2091,14 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x640
+.debug_ranges   0x00000000      0x638
  *(.debug_ranges)
  .debug_ranges  0x00000000      0x2d0 Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_ranges  0x000002d0      0x1b0 main.o
- .debug_ranges  0x00000480       0x38 XMEGA_API/DIGITALPIN.o
- .debug_ranges  0x000004b8      0x110 XMEGA_API/USART.o
- .debug_ranges  0x000005c8       0x58 XMEGA_DRIVERS/clksys_driver.o
- .debug_ranges  0x00000620       0x20 XMEGA_SERVICES/bootloader.o
+ .debug_ranges  0x000002d0      0x1a8 main.o
+ .debug_ranges  0x00000478       0x38 XMEGA_API/DIGITALPIN.o
+ .debug_ranges  0x000004b0      0x110 XMEGA_API/USART.o
+ .debug_ranges  0x000005c0       0x58 XMEGA_DRIVERS/clksys_driver.o
+ .debug_ranges  0x00000618       0x20 XMEGA_SERVICES/bootloader.o
 
 .debug_macro
  *(.debug_macro)
