@@ -69,6 +69,11 @@
 	#error  APPTABLE_SECTION_START must be defined if not defined in header files.
 #endif /*APPTABLE_SECTION_START*/
 
+#ifdef __cplusplus
+extern "C"  {
+	#endif
+
+
 /*! \brief Read a byte from flash.
  *
  *  This function reads one byte from the flash.
@@ -80,9 +85,7 @@
  *
  *  \retval Byte read from flash.
  */
-   #ifdef __cplusplus
-extern "C"  {
-#endif
+
 extern uint8_t SP_ReadByte(uint32_t address);
 
 /*! \brief Read a word from flash.
