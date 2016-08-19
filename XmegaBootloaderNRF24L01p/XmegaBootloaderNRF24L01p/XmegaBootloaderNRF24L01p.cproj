@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATxmega384C3</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>XmegaBootloaderNRF24L01p</AssemblyName>
+    <Name>XmegaBootloaderNRF24L01p</Name>
+    <RootNamespace>XmegaBootloaderNRF24L01p</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.31.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800024495</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9845</avrdeviceexpectedsignature>
+    <avrtoolinterface>PDI</avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <PdiClock>4000000</PdiClock>
+        </InterfaceProperties>
+        <InterfaceName>PDI</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800024495</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atxmega384c3 -B "%24(PackRepoDir)\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAC_DFP\1.0.29\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAC_DFP\1.0.29\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atxmega384c3 -B "%24(PackRepoDir)\atmel\XMEGAC_DFP\1.0.29\gcc\dev\atxmega384c3"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>BOARD=BOARD_C3_XPLAINED</Value>
+            <Value>ARCH=ARCH_XMEGA</Value>
+            <Value>F_CPU=32000000UL</Value>
+            <Value>USE_LUFA_CONFIG_HEADER</Value>
+            <Value>F_USB=48000000UL</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAC_DFP\1.0.29\include</Value>
+            <Value>..</Value>
+            <Value>../XMEGA_DRIVERS</Value>
+            <Value>../XMEGA_API</Value>
+            <Value>../LUFA</Value>
+            <Value>../FreeRTOS</Value>
+            <Value>../FreeRTOS/include</Value>
+            <Value>../FreeRTOS/include/portable/GCC/ATMega323</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.memorysettings.Flash>
+          <ListValues>
+            <Value>.text = 0x30000</Value>
+          </ListValues>
+        </avrgcc.linker.memorysettings.Flash>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAC_DFP\1.0.29\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Component_Drivers\components.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ds1302\ds1302.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ds1302\ds1302.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ds1302\ds1302_arch_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\lcd03\lcd03.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\lcd03\lcd03.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\lcd03\lcd03_arch_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\nrf24l01p\nrf24l01p.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\nrf24l01p\nrf24l01p.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\nrf24l01p\nrf24l01p_arch_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\nrf24l01p\nrf24l01p_mesh.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ssd1306\font.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ssd1306\font.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ssd1306\gfx_mono.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ssd1306\ssd1306.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Component_Drivers\ssd1306\ssd130g_arch_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_API\api_common.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_API\DIGITALPIN.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_API\DIGITALPIN.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_API\I2C.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_API\USART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_API\USART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_API\xmega_api.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\ac_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\adc_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\adc_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\avr_compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\awex_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\clksys_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\clksys_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\dac_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\dma_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\dma_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\ebi_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\eeprom_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\eeprom_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\hires_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\IR_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\IR_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\pmic_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\pmic_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\port_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\port_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\rtc_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\rtc_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\spi_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\spi_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\TC_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\TC_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\twi_master_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\twi_master_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\twi_slave_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\twi_slave_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\usart_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\usart_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\wdt_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\wdt_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_DRIVERS\xmega_drivers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_SERVICES\bootloader.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_SERVICES\bootloader.s">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_SERVICES\stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_SERVICES\xmega_core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="XMEGA_SERVICES\xmega_services.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Component_Drivers\" />
+    <Folder Include="Component_Drivers\ds1302\" />
+    <Folder Include="Component_Drivers\lcd03\" />
+    <Folder Include="Component_Drivers\nrf24l01p\" />
+    <Folder Include="Component_Drivers\ssd1306\" />
+    <Folder Include="XMEGA_API\" />
+    <Folder Include="XMEGA_DRIVERS\" />
+    <Folder Include="XMEGA_SERVICES\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
