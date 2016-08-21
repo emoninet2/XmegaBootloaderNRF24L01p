@@ -28,6 +28,8 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               main.o (strtok)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok_r.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok.o) (strtok_r)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(sprintf.o)
+                              main.o (sprintf)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime.o)
                               main.o (localtime)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime_r.o)
@@ -38,6 +40,16 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime.o) (__tm_store)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(utc_offset.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime_r.o) (__utc_offset)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(sprintf.o) (vfprintf)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen_P.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o) (strnlen_P)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o) (strnlen)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(fputc.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o) (fputc)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(ultoa_invert.o)
+                              c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o) (__ultoa_invert)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(dst_pointer.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime_r.o) (__dst_ptr)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(gmtime_r.o)
@@ -515,10 +527,10 @@ Discarded input sections
                 0x00000000      0x148 main.o
  .text.ds1302_getTimestamp
                 0x00000000      0x11a main.o
- .rodata.str1.1
-                0x00000000        0x3 main.o
  .text.command_parse_execute
                 0x00000000       0x32 main.o
+ .text.uint64_tu8tou64
+                0x00000000        0x8 main.o
  .bss._boot_mode
                 0x00000000        0x1 main.o
  .data.myswitch2
@@ -689,14 +701,6 @@ Discarded input sections
  .text          0x00000000        0x0 XMEGA_DRIVERS/eeprom_driver.o
  .data          0x00000000        0x0 XMEGA_DRIVERS/eeprom_driver.o
  .bss           0x00000000        0x0 XMEGA_DRIVERS/eeprom_driver.o
- .text.EEPROM_WaitForNVM
-                0x00000000        0xc XMEGA_DRIVERS/eeprom_driver.o
- .text.EEPROM_ReadByte
-                0x00000000       0x4e XMEGA_DRIVERS/eeprom_driver.o
- .text.EEPROM_FlushBuffer
-                0x00000000       0x30 XMEGA_DRIVERS/eeprom_driver.o
- .text.EEPROM_WriteByte
-                0x00000000       0x58 XMEGA_DRIVERS/eeprom_driver.o
  .text.EEPROM_LoadByte
                 0x00000000       0x22 XMEGA_DRIVERS/eeprom_driver.o
  .text.EEPROM_LoadPage
@@ -707,18 +711,6 @@ Discarded input sections
                 0x00000000       0x42 XMEGA_DRIVERS/eeprom_driver.o
  .text.EEPROM_SplitWritePage
                 0x00000000       0x42 XMEGA_DRIVERS/eeprom_driver.o
- .text.EEPROM_EraseAll
-                0x00000000       0x28 XMEGA_DRIVERS/eeprom_driver.o
- .debug_info    0x00000000      0x4fe XMEGA_DRIVERS/eeprom_driver.o
- .debug_abbrev  0x00000000      0x19d XMEGA_DRIVERS/eeprom_driver.o
- .debug_loc     0x00000000      0x486 XMEGA_DRIVERS/eeprom_driver.o
- .debug_aranges
-                0x00000000       0x68 XMEGA_DRIVERS/eeprom_driver.o
- .debug_ranges  0x00000000       0x58 XMEGA_DRIVERS/eeprom_driver.o
- .debug_line    0x00000000      0x374 XMEGA_DRIVERS/eeprom_driver.o
- .debug_str     0x00000000      0x6d2 XMEGA_DRIVERS/eeprom_driver.o
- .comment       0x00000000       0x31 XMEGA_DRIVERS/eeprom_driver.o
- .debug_frame   0x00000000      0x100 XMEGA_DRIVERS/eeprom_driver.o
  .text          0x00000000        0x0 XMEGA_DRIVERS/IR_driver.o
  .data          0x00000000        0x0 XMEGA_DRIVERS/IR_driver.o
  .bss           0x00000000        0x0 XMEGA_DRIVERS/IR_driver.o
@@ -1211,6 +1203,9 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok_r.o)
  .text.avr-libc
                 0x00000000       0x4e c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strtok_r.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(sprintf.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(sprintf.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(sprintf.o)
  .text          0x00000000        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(localtime.o)
@@ -1233,6 +1228,21 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(utc_offset.o)
  .comment       0x00000000       0x2d c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(utc_offset.o)
  COMMON         0x00000000        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(utc_offset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen_P.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen_P.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen_P.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(fputc.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(fputc.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(fputc.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(ultoa_invert.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(ultoa_invert.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(ultoa_invert.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(dst_pointer.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(dst_pointer.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(dst_pointer.o)
@@ -1460,7 +1470,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00060000     0x13e0
+.text           0x00060000     0x1c3e
  *(.vectors)
  .vectors       0x00060000      0x1fc C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/XMEGAC_DFP/1.0.29/gcc/dev/atxmega384c3/avrxmega6/crtatxmega384c3.o
                 0x00060000                __vector_default
@@ -1785,73 +1795,106 @@ END GROUP
                 0x00060e02       0x62 Component_Drivers/nrf24l01p/nrf24l01p.o
                 0x00060e02                _nrf24l01p_read_dyn_pld
  .text.package_handler
-                0x00060e64      0x22e main.o
+                0x00060e64      0x3ae main.o
                 0x00060e64                package_handler
- .text.main     0x00061092      0x132 main.o
-                0x00061092                main
+ .text.main     0x00061212      0x170 main.o
+                0x00061212                main
  .text.DigitalPin_SetDir
-                0x000611c4       0x44 XMEGA_API/DIGITALPIN.o
-                0x000611c4                DigitalPin_SetDir
+                0x00061382       0x44 XMEGA_API/DIGITALPIN.o
+                0x00061382                DigitalPin_SetDir
  .text.DigitalPin_SetValue
-                0x00061208       0x20 XMEGA_API/DIGITALPIN.o
-                0x00061208                DigitalPin_SetValue
+                0x000613c6       0x20 XMEGA_API/DIGITALPIN.o
+                0x000613c6                DigitalPin_SetValue
  .text.DigitalPin_ClearValue
-                0x00061228       0x20 XMEGA_API/DIGITALPIN.o
-                0x00061228                DigitalPin_ClearValue
+                0x000613e6       0x20 XMEGA_API/DIGITALPIN.o
+                0x000613e6                DigitalPin_ClearValue
  .text.__vector_25
-                0x00061248       0x14 XMEGA_API/USART.o
-                0x00061248                __vector_25
+                0x00061406       0x14 XMEGA_API/USART.o
+                0x00061406                __vector_25
  .text.__vector_27
-                0x0006125c       0x14 XMEGA_API/USART.o
-                0x0006125c                __vector_27
+                0x0006141a       0x14 XMEGA_API/USART.o
+                0x0006141a                __vector_27
  .text.__vector_26
-                0x00061270       0x14 XMEGA_API/USART.o
-                0x00061270                __vector_26
+                0x0006142e       0x14 XMEGA_API/USART.o
+                0x0006142e                __vector_26
  .text.__vector_28
-                0x00061284       0x14 XMEGA_API/USART.o
-                0x00061284                __vector_28
+                0x00061442       0x14 XMEGA_API/USART.o
+                0x00061442                __vector_28
  .text.__vector_30
-                0x00061298       0x14 XMEGA_API/USART.o
-                0x00061298                __vector_30
+                0x00061456       0x14 XMEGA_API/USART.o
+                0x00061456                __vector_30
  .text.__vector_29
-                0x000612ac       0x14 XMEGA_API/USART.o
-                0x000612ac                __vector_29
+                0x0006146a       0x14 XMEGA_API/USART.o
+                0x0006146a                __vector_29
  .text.__vector_88
-                0x000612c0       0x14 XMEGA_API/USART.o
-                0x000612c0                __vector_88
+                0x0006147e       0x14 XMEGA_API/USART.o
+                0x0006147e                __vector_88
  .text.__vector_90
-                0x000612d4       0x14 XMEGA_API/USART.o
-                0x000612d4                __vector_90
+                0x00061492       0x14 XMEGA_API/USART.o
+                0x00061492                __vector_90
  .text.__vector_89
-                0x000612e8       0x14 XMEGA_API/USART.o
-                0x000612e8                __vector_89
+                0x000614a6       0x14 XMEGA_API/USART.o
+                0x000614a6                __vector_89
  .text.__vector_58
-                0x000612fc       0x14 XMEGA_API/USART.o
-                0x000612fc                __vector_58
+                0x000614ba       0x14 XMEGA_API/USART.o
+                0x000614ba                __vector_58
  .text.__vector_60
-                0x00061310       0x14 XMEGA_API/USART.o
-                0x00061310                __vector_60
+                0x000614ce       0x14 XMEGA_API/USART.o
+                0x000614ce                __vector_60
  .text.__vector_59
-                0x00061324       0x14 XMEGA_API/USART.o
-                0x00061324                __vector_59
+                0x000614e2       0x14 XMEGA_API/USART.o
+                0x000614e2                __vector_59
  .text.CCPWrite
-                0x00061338       0x2a XMEGA_DRIVERS/clksys_driver.o
-                0x00061338                CCPWrite
+                0x000614f6       0x2a XMEGA_DRIVERS/clksys_driver.o
+                0x000614f6                CCPWrite
  .text.CLKSYS_Disable
-                0x00061362       0x14 XMEGA_DRIVERS/clksys_driver.o
-                0x00061362                CLKSYS_Disable
+                0x00061520       0x14 XMEGA_DRIVERS/clksys_driver.o
+                0x00061520                CLKSYS_Disable
  .text.CLKSYS_Main_ClockSource_Select
-                0x00061376       0x2a XMEGA_DRIVERS/clksys_driver.o
-                0x00061376                CLKSYS_Main_ClockSource_Select
+                0x00061534       0x2a XMEGA_DRIVERS/clksys_driver.o
+                0x00061534                CLKSYS_Main_ClockSource_Select
+ .text.EEPROM_WaitForNVM
+                0x0006155e        0xc XMEGA_DRIVERS/eeprom_driver.o
+                0x0006155e                EEPROM_WaitForNVM
+ .text.EEPROM_ReadByte
+                0x0006156a       0x4e XMEGA_DRIVERS/eeprom_driver.o
+                0x0006156a                EEPROM_ReadByte
+ .text.EEPROM_FlushBuffer
+                0x000615b8       0x30 XMEGA_DRIVERS/eeprom_driver.o
+                0x000615b8                EEPROM_FlushBuffer
+ .text.EEPROM_WriteByte
+                0x000615e8       0x58 XMEGA_DRIVERS/eeprom_driver.o
+                0x000615e8                EEPROM_WriteByte
+ .text.EEPROM_EraseAll
+                0x00061640       0x28 XMEGA_DRIVERS/eeprom_driver.o
+                0x00061640                EEPROM_EraseAll
  .text.libgcc.builtins
-                0x000613a0       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_ashrdi3.o)
-                0x000613a0                __ashrdi3
-                0x000613a4                __lshrdi3
-                0x000613dc                . = ALIGN (0x2)
+                0x00061668       0x3c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_ashrdi3.o)
+                0x00061668                __ashrdi3
+                0x0006166c                __lshrdi3
+ .text.avr-libc
+                0x000616a4       0x54 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(sprintf.o)
+                0x000616a4                sprintf
+ .text.avr-libc
+                0x000616f8      0x3ea c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o)
+                0x000616f8                vfprintf
+ .text.avr-libc
+                0x00061ae2       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen_P.o)
+                0x00061ae2                strnlen_P
+ .text.avr-libc
+                0x00061af8       0x16 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(strnlen.o)
+                0x00061af8                strnlen
+ .text.avr-libc
+                0x00061b0e       0x70 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(fputc.o)
+                0x00061b0e                fputc
+ .text.avr-libc
+                0x00061b7e       0xbc c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(ultoa_invert.o)
+                0x00061b7e                __ultoa_invert
+                0x00061c3a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000613dc        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
-                0x000613dc                _exit
-                0x000613dc                exit
+ .fini9         0x00061c3a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
+                0x00061c3a                _exit
+                0x00061c3a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1870,15 +1913,15 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000613dc        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
+ .fini0         0x00061c3a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/avrxmega6\libgcc.a(_exit.o)
  *(.fini0)
-                0x000613e0                _etext = .
+                0x00061c3e                _etext = .
 
-.BOOT           0x000613e0       0x3a
- .BOOT          0x000613e0       0x3a XMEGA_SERVICES/bootloader.o
-                0x000613e0                SP_LoadFlashPage
+.BOOT           0x00061c3e       0x3a
+ .BOOT          0x00061c3e       0x3a XMEGA_SERVICES/bootloader.o
+                0x00061c3e                SP_LoadFlashPage
 
-.data           0x00802000       0x1a load address 0x0006141a
+.data           0x00802000       0x60 load address 0x00061c78
                 0x00802000                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -1899,38 +1942,41 @@ END GROUP
                 0x00802017                led1
  *(.rodata)
  *(.rodata*)
+ .rodata.str1.1
+                0x0080201a       0x45 main.o
  *(.gnu.linkonce.d*)
-                0x0080201a                . = ALIGN (0x2)
-                0x0080201a                _edata = .
-                0x0080201a                PROVIDE (__data_end, .)
+                0x00802060                . = ALIGN (0x2)
+ *fill*         0x0080205f        0x1 
+                0x00802060                _edata = .
+                0x00802060                PROVIDE (__data_end, .)
 
-.bss            0x0080201a      0x437
-                0x0080201a                PROVIDE (__bss_start, .)
+.bss            0x00802060      0x437
+                0x00802060                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.nrf_led_flag
-                0x0080201a        0x1 main.o
-                0x0080201a                nrf_led_flag
+                0x00802060        0x1 main.o
+                0x00802060                nrf_led_flag
  *(COMMON)
- COMMON         0x0080201b        0x5 Component_Drivers/nrf24l01p/nrf24l01p.o
-                0x0080201b                csn_value
-                0x0080201c                ce_value
-                0x0080201d                mode
-                0x0080201e                mystat
- COMMON         0x00802020      0x431 main.o
-                0x00802020                myflashpagedata
-                0x00802220                nrf24l01p_reachable_addresses
-                0x00802250                myflashpagedata2
-                0x00802450                writeProtect
-                0x00802451                PROVIDE (__bss_end, .)
-                0x0006141a                __data_load_start = LOADADDR (.data)
-                0x00061434                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00802061        0x5 Component_Drivers/nrf24l01p/nrf24l01p.o
+                0x00802061                csn_value
+                0x00802062                ce_value
+                0x00802063                mode
+                0x00802064                mystat
+ COMMON         0x00802066      0x431 main.o
+                0x00802066                myflashpagedata
+                0x00802266                nrf24l01p_reachable_addresses
+                0x00802296                myflashpagedata2
+                0x00802496                writeProtect
+                0x00802497                PROVIDE (__bss_end, .)
+                0x00061c78                __data_load_start = LOADADDR (.data)
+                0x00061cd8                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00802451        0x0
+.noinit         0x00802497        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00802451                _end = .
+                0x00802497                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -1970,7 +2016,7 @@ END GROUP
 .stab.indexstr
  *(.stab.indexstr)
 
-.comment        0x00000000       0x30
+.comment        0x00000000       0x5c
  *(.comment)
  .comment       0x00000000       0x30 Component_Drivers/nrf24l01p/nrf24l01p.o
                                  0x31 (size before relaxing)
@@ -1978,6 +2024,11 @@ END GROUP
  .comment       0x00000030       0x31 XMEGA_API/DIGITALPIN.o
  .comment       0x00000030       0x31 XMEGA_API/USART.o
  .comment       0x00000030       0x31 XMEGA_DRIVERS/clksys_driver.o
+ .comment       0x00000030       0x31 XMEGA_DRIVERS/eeprom_driver.o
+ .comment       0x00000030       0x31 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(sprintf.o)
+ .comment       0x00000030       0x2c c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(vfprintf_std.o)
+                                 0x2d (size before relaxing)
+ .comment       0x0000005c       0x31 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/4.9.2/../../../../avr/lib/avrxmega6\libc.a(fputc.o)
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
@@ -1999,79 +2050,88 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x618
+.debug_aranges  0x00000000      0x688
  *(.debug_aranges)
  .debug_aranges
                 0x00000000      0x298 Component_Drivers/nrf24l01p/nrf24l01p.o
  .debug_aranges
-                0x00000298      0x188 main.o
+                0x00000298      0x190 main.o
  .debug_aranges
-                0x00000420       0x48 XMEGA_API/DIGITALPIN.o
+                0x00000428       0x48 XMEGA_API/DIGITALPIN.o
  .debug_aranges
-                0x00000468      0x120 XMEGA_API/USART.o
+                0x00000470      0x120 XMEGA_API/USART.o
  .debug_aranges
-                0x00000588       0x68 XMEGA_DRIVERS/clksys_driver.o
+                0x00000590       0x68 XMEGA_DRIVERS/clksys_driver.o
  .debug_aranges
-                0x000005f0       0x28 XMEGA_SERVICES/bootloader.o
+                0x000005f8       0x68 XMEGA_DRIVERS/eeprom_driver.o
+ .debug_aranges
+                0x00000660       0x28 XMEGA_SERVICES/bootloader.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x726b
+.debug_info     0x00000000     0x7a3a
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x2cdc Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_info    0x00002cdc     0x3021 main.o
- .debug_info    0x00005cfd      0x4c8 XMEGA_API/DIGITALPIN.o
- .debug_info    0x000061c5      0x9bf XMEGA_API/USART.o
- .debug_info    0x00006b84      0x645 XMEGA_DRIVERS/clksys_driver.o
- .debug_info    0x000071c9       0xa2 XMEGA_SERVICES/bootloader.o
+ .debug_info    0x00002cdc     0x32f2 main.o
+ .debug_info    0x00005fce      0x4c8 XMEGA_API/DIGITALPIN.o
+ .debug_info    0x00006496      0x9bf XMEGA_API/USART.o
+ .debug_info    0x00006e55      0x645 XMEGA_DRIVERS/clksys_driver.o
+ .debug_info    0x0000749a      0x4fe XMEGA_DRIVERS/eeprom_driver.o
+ .debug_info    0x00007998       0xa2 XMEGA_SERVICES/bootloader.o
 
-.debug_abbrev   0x00000000      0xe79
+.debug_abbrev   0x00000000     0x1032
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x411 Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_abbrev  0x00000411      0x5e1 main.o
- .debug_abbrev  0x000009f2      0x15f XMEGA_API/DIGITALPIN.o
- .debug_abbrev  0x00000b51      0x14e XMEGA_API/USART.o
- .debug_abbrev  0x00000c9f      0x1c8 XMEGA_DRIVERS/clksys_driver.o
- .debug_abbrev  0x00000e67       0x12 XMEGA_SERVICES/bootloader.o
+ .debug_abbrev  0x00000411      0x5fd main.o
+ .debug_abbrev  0x00000a0e      0x15f XMEGA_API/DIGITALPIN.o
+ .debug_abbrev  0x00000b6d      0x14e XMEGA_API/USART.o
+ .debug_abbrev  0x00000cbb      0x1c8 XMEGA_DRIVERS/clksys_driver.o
+ .debug_abbrev  0x00000e83      0x19d XMEGA_DRIVERS/eeprom_driver.o
+ .debug_abbrev  0x00001020       0x12 XMEGA_SERVICES/bootloader.o
 
-.debug_line     0x00000000     0x3177
+.debug_line     0x00000000     0x3648
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000     0x12ed Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_line    0x000012ed     0x116e main.o
- .debug_line    0x0000245b      0x1f7 XMEGA_API/DIGITALPIN.o
- .debug_line    0x00002652      0x516 XMEGA_API/USART.o
- .debug_line    0x00002b68      0x24f XMEGA_DRIVERS/clksys_driver.o
- .debug_line    0x00002db7      0x3c0 XMEGA_SERVICES/bootloader.o
+ .debug_line    0x000012ed     0x12cb main.o
+ .debug_line    0x000025b8      0x1f7 XMEGA_API/DIGITALPIN.o
+ .debug_line    0x000027af      0x516 XMEGA_API/USART.o
+ .debug_line    0x00002cc5      0x24f XMEGA_DRIVERS/clksys_driver.o
+ .debug_line    0x00002f14      0x374 XMEGA_DRIVERS/eeprom_driver.o
+ .debug_line    0x00003288      0x3c0 XMEGA_SERVICES/bootloader.o
 
-.debug_frame    0x00000000     0x14ac
+.debug_frame    0x00000000     0x15cc
  *(.debug_frame)
  .debug_frame   0x00000000      0xae0 Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_frame   0x00000ae0      0x598 main.o
- .debug_frame   0x00001078       0x7c XMEGA_API/DIGITALPIN.o
- .debug_frame   0x000010f4      0x2dc XMEGA_API/USART.o
- .debug_frame   0x000013d0       0xdc XMEGA_DRIVERS/clksys_driver.o
+ .debug_frame   0x00000ae0      0x5b8 main.o
+ .debug_frame   0x00001098       0x7c XMEGA_API/DIGITALPIN.o
+ .debug_frame   0x00001114      0x2dc XMEGA_API/USART.o
+ .debug_frame   0x000013f0       0xdc XMEGA_DRIVERS/clksys_driver.o
+ .debug_frame   0x000014cc      0x100 XMEGA_DRIVERS/eeprom_driver.o
 
-.debug_str      0x00000000     0x2acf
+.debug_str      0x00000000     0x2fce
  *(.debug_str)
  .debug_str     0x00000000     0x108c Component_Drivers/nrf24l01p/nrf24l01p.o
                                0x1161 (size before relaxing)
- .debug_str     0x0000108c     0x1175 main.o
-                               0x161d (size before relaxing)
- .debug_str     0x00002201       0xae XMEGA_API/DIGITALPIN.o
+ .debug_str     0x0000108c     0x11e4 main.o
+                               0x168c (size before relaxing)
+ .debug_str     0x00002270       0xae XMEGA_API/DIGITALPIN.o
                                 0x4f0 (size before relaxing)
- .debug_str     0x000022af      0x322 XMEGA_API/USART.o
+ .debug_str     0x0000231e      0x322 XMEGA_API/USART.o
                                 0x8e6 (size before relaxing)
- .debug_str     0x000025d1      0x4fe XMEGA_DRIVERS/clksys_driver.o
+ .debug_str     0x00002640      0x4fe XMEGA_DRIVERS/clksys_driver.o
                                 0x7f3 (size before relaxing)
+ .debug_str     0x00002b3e      0x490 XMEGA_DRIVERS/eeprom_driver.o
+                                0x6d2 (size before relaxing)
 
-.debug_loc      0x00000000     0x56b2
+.debug_loc      0x00000000     0x5ba7
  *(.debug_loc)
  .debug_loc     0x00000000     0x296a Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_loc     0x0000296a     0x22d8 main.o
- .debug_loc     0x00004c42       0xd0 XMEGA_API/DIGITALPIN.o
- .debug_loc     0x00004d12      0x6ea XMEGA_API/USART.o
- .debug_loc     0x000053fc      0x2b6 XMEGA_DRIVERS/clksys_driver.o
+ .debug_loc     0x0000296a     0x2347 main.o
+ .debug_loc     0x00004cb1       0xd0 XMEGA_API/DIGITALPIN.o
+ .debug_loc     0x00004d81      0x6ea XMEGA_API/USART.o
+ .debug_loc     0x0000546b      0x2b6 XMEGA_DRIVERS/clksys_driver.o
+ .debug_loc     0x00005721      0x486 XMEGA_DRIVERS/eeprom_driver.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2091,14 +2151,15 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x638
+.debug_ranges   0x00000000      0x698
  *(.debug_ranges)
  .debug_ranges  0x00000000      0x2d0 Component_Drivers/nrf24l01p/nrf24l01p.o
- .debug_ranges  0x000002d0      0x1a8 main.o
- .debug_ranges  0x00000478       0x38 XMEGA_API/DIGITALPIN.o
- .debug_ranges  0x000004b0      0x110 XMEGA_API/USART.o
- .debug_ranges  0x000005c0       0x58 XMEGA_DRIVERS/clksys_driver.o
- .debug_ranges  0x00000618       0x20 XMEGA_SERVICES/bootloader.o
+ .debug_ranges  0x000002d0      0x1b0 main.o
+ .debug_ranges  0x00000480       0x38 XMEGA_API/DIGITALPIN.o
+ .debug_ranges  0x000004b8      0x110 XMEGA_API/USART.o
+ .debug_ranges  0x000005c8       0x58 XMEGA_DRIVERS/clksys_driver.o
+ .debug_ranges  0x00000620       0x58 XMEGA_DRIVERS/eeprom_driver.o
+ .debug_ranges  0x00000678       0x20 XMEGA_SERVICES/bootloader.o
 
 .debug_macro
  *(.debug_macro)

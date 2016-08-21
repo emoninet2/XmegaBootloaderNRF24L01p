@@ -59,7 +59,7 @@ do                          \
 
 volatile bool nrf_led_flag  =0;
 
-volatile uint64_t nrfTXaddr = 0x0102030405;
+volatile uint64_t nrfTXaddr  = 0xAABBCCDD01;
 
 // void *command_handler(char **args,int arg_count){
 // 
@@ -105,17 +105,51 @@ void command_parse_execute(char *command){
 	//command_handler(remotch_args,arg_index);
 }
 
+uint64_tu8tou64(uint8_t const u8[static 8]){
+	uint64_t u64;
+	memcpy(&u64, u8, sizeof u64);
+	return u64;
+}
+
+
+
 
 void package_handler(uint8_t *command){
 
 	if (command[0]=='a'){
-		nrfTXaddr = (command[1]<<32) | (command[2]<<24) | (command[3]<<16) | (command[4]<<8) | (command[5]<<0);
+		uint8_t *pt = &nrfTXaddr;
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt++ = (command[3]);
+		*pt++ = (command[2]);
+		*pt = (command[1]);
 	}
 	else if(command[0]=='x'){//led ON
 		DigitalPin_SetValue(&led1);
+		char str[20];
+		sprintf(str,"light is off\r\n");
+		_nrf24l01p_send_to_address(nrfTXaddr, str, strlen(str));
 	}
 	else if (command[0]=='y'){//led OFF
 		DigitalPin_ClearValue(&led1);
+		char str[20];
+		sprintf(str,"light is on\r\n");
+		_nrf24l01p_send_to_address(nrfTXaddr, str, strlen(str));
+	}
+
+	else if (command[0]=='s'){//led OFF
+		EEPROM_WriteByte( command[1], command[2], command[3] );
+	}
+
+	else if (command[0]=='t'){//led OFF
+		
+		uint8_t val = EEPROM_ReadByte(  command[1], command[2] );
+		char str[20];
+		sprintf(str,"EEPROM value : %x\r\n",val);
+		_nrf24l01p_send_to_address(nrfTXaddr, str, strlen(str));
+	}
+	else if (command[0]=='u'){//led OFF
+		EEPROM_EraseAll();
 	}
 	else if (command[0]=='q'){
  		
@@ -134,20 +168,48 @@ void package_handler(uint8_t *command){
 		soft_reset();
 	}
 	else if (command[0]=='r'){//read byte
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[4]);
+		*pt++ = (command[3]);
+		*pt++ = (command[2]);
+		*pt = (command[1]);
+
 		uint8_t data;
 		data =  SP_ReadByte(address);
-		_nrf24l01p_send_to_address(nrfTXaddr, data, sizeof(data));
+		char str[20];
+		sprintf(str,"the data is %x\r\n",data);
+		_nrf24l01p_send_to_address(nrfTXaddr, str, strlen(str));
  	}
 	else if (command[0]=='R'){//read word
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[4]);
+		*pt++ = (command[3]);
+		*pt++ = (command[2]);
+		*pt = (command[1]);
+
 		uint16_t data;
 		data =  SP_ReadWord(address);
-		_nrf24l01p_send_to_address(nrfTXaddr, data, sizeof(data));
+		_nrf24l01p_send_to_address(nrfTXaddr, &data, sizeof(data));
 	}
 	else if (command[0]=='L'){
-		uint32_t address = (command[3]<<24) | (command[4]<<16) |  (command[5]<<8)  | command[6] ;
-		uint16_t data = (command[1]<<24) | (command[2]<<16);
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[6]);
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt = (command[3]);
+
+		uint16_t data;
+
+		uint8_t *ptd = &data;
+		*ptd++ = (command[2]);
+		*ptd = (command[1]);
+
 		SP_LoadFlashWord(address, data);
 	}
 	else if (command[0]=='C'){
@@ -157,27 +219,65 @@ void package_handler(uint8_t *command){
 		SP_EraseApplicationSections();
 	}
 	else if (command[0]=='e'){
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[6]);
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt = (command[3]);
+
 		SP_EraseApplicationPage( address);
 	}
 	else if (command[0]=='m'){
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[6]);
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt = (command[3]);
+
 		SP_WriteApplicationPage(address);
 	}
 	else if (command[0]=='M'){
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[6]);
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt = (command[3]);
 		SP_EraseWriteApplicationPage(address);
 	}
 	else if (command[0]=='d'){
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[6]);
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt = (command[3]);
 		SP_EraseBootPage(address);
 	}
 	else if (command[0]=='n'){
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[6]);
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt = (command[3]);
 		SP_WriteBootPage(address);
 	}
 	else if (command[0]=='N'){
-		uint32_t address = (command[1]<<24) | (command[2]<<16) |  (command[3]<<8)  | command[4] ;
+		uint32_t address;
+
+		uint8_t *pt = &address;
+		*pt++ = (command[6]);
+		*pt++ = (command[5]);
+		*pt++ = (command[4]);
+		*pt = (command[3]);
 		SP_EraseWriteBootPage(address);
 	}
 
@@ -225,27 +325,40 @@ int main(void)
 	//DigitalPin_ClearValue(&powLedG);//off
 
 
-	uint64_t nrfTXaddr = 0x4C4C4C4C31;
+	nrfTXaddr = 0xAABBCCDD01;
+
+
 	_nrf24l01p_init();
 
 	//LEFT
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P1, nrfTXaddr);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P2, nrfTXaddr+1);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P3, nrfTXaddr+2);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P4, nrfTXaddr+3);
-	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P5, nrfTXaddr+4);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P1, 0x4C4C4C4C31);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P2, 0x4C4C4C4C32);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P3, 0x4C4C4C4C33);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P4, 0x4C4C4C4C34);
+	_nrf24l01p_set_RX_pipe_address(_NRF24L01P_PIPE_P5, 0x4C4C4C4C35);
 	char rxData[35];
+	bool package_handler_signal = 0;
 
 	while(1){
+
+
 
 		if((_nrf24l01p_readable(_NRF24L01P_PIPE_P1))){
 			asm("nop");
 			nrf_led_flag = 1;
 			int width = _nrf24l01p_read_dyn_pld(_NRF24L01P_PIPE_P1, (uint8_t*) rxData);
 			rxData[width] = '\0';
-			package_handler(rxData);
+			package_handler_signal = 1;
+			
 		}
-	
+		
+		if(package_handler_signal){
+			_delay_ms(100);
+			package_handler(rxData);
+			package_handler_signal = 0;
+		}
+
+
 	}
 
 
